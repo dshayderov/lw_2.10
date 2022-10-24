@@ -2,22 +2,22 @@
 # -*- coding: utf-8 -*-
 
 
-def srgeo(*args):
+def srhar(*args):
     if args:
         values = [float(arg) for arg in args]
         values.sort()
 
         n = len(values)
-        p = 1
+        s = 0
         for value in values:
-            p *= value
-        g = pow(p, 1/n)
-        return g
+            s += 1/value
+        h = n/s
+        return h
 
     else:
         return None
 
 
 if __name__ == "__main__":
-    print(srgeo())
-    print(srgeo(3.5, 2.4, 0.2, 0.3, 1000))
+    print(srhar())
+    print(srhar(5, 1, 3, 2))
