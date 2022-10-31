@@ -11,7 +11,7 @@ def srhar(*args):
         s = 0
         for value in values:
             s += 1/value
-        h = n/s
+        h = n / s
         return h
 
     else:
