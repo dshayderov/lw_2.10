@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+"""
+Сумма аргументов, расположенных между первым и вторым положительными аргументами.
+"""
+
 
 def sumplus(*args):
     pos1 = -1
     pos2 = -1
-    s = 0
     if args:
         for arg in args:
             if arg > 0:
@@ -17,9 +20,7 @@ def sumplus(*args):
                 pos2 = args.index(arg)
                 break
 
-        for arg in args[pos1 + 1: pos2]:
-            s += arg
-        return s
+        return sum([arg for arg in args[pos1 + 1: pos2]])
 
     else:
         return None
